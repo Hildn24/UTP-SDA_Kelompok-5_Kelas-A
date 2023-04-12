@@ -1,0 +1,37 @@
+keuangan = keuangan()
+
+print()
+while True:
+    print("===============================")
+    print("      CATATAN KEUANGAN         ")
+    print("===============================")
+    print("Menu : ")
+    print("1. Tambah Pemasukan")
+    print("2. Tambah Pengeluaran")
+    print("3. Daftar Keuangan")
+    print("4. Keluar")
+    pilihan = input("Masukkan Pilihan Anda : ")
+
+    if pilihan == "1":
+        jumlah = int(input("Masukkan jumlah Pemasukan : "))
+        keuangan.tambah_pemasukan(jumlah)
+        print("Pemasukan Anda Berhasil Ditambahkan!")
+        print()
+        
+    elif pilihan == "2":
+        jumlah = int(input("Masukkan jumlah Pengeluaran : "))
+        keuangan.tambah_pengeluaran(jumlah)
+        print("Pengeluaran Anda Berhasil Ditambahkan!")
+        print()
+        
+    elif pilihan == "3":
+        keuangan.daftar_keuangan()
+        
+    elif pilihan == "4":
+        print("Terima kasih telah menggunakan program ini!")
+        print()
+        break
+    
+    else:
+        print("Mohon maaf, pilihan tidak tersedia!!")
+        print()
