@@ -1,0 +1,42 @@
+class keuangan:
+    def _init_(self):
+        self.pemasukan = []
+        self.pengeluaran = []
+        sleep(2)
+
+    def tambah_pemasukan(self, jumlah):
+        self.pemasukan.append(jumlah)
+        sleep(2)
+        
+    def tambah_pengeluaran(self, jumlah):
+        self.pengeluaran.append(jumlah)
+        sleep(2)
+        
+    def hitung_total_pemasukan(self):
+        return sum(self.pemasukan)
+        sleep(2)
+        
+    def hitung_total_pengeluaran(self):
+        return sum(self.pengeluaran)
+        sleep(2)
+        
+    def hitung_saldo(self):
+        return self.hitung_total_pemasukan() - self.hitung_total_pengeluaran()
+        sleep(2)
+        
+    def daftar_keuangan(self):
+        print("Daftar Pemasukan : ")
+        for pemasukan in self.pemasukan:
+            print(f"Rp. {pemasukan}")
+        print(f"Total Pemasukan : Rp. {self.hitung_total_pemasukan()}")
+        
+        print()
+        print("Daftar Pengeluaran : ")
+        for pengeluaran in self.pengeluaran:
+            print(f"Rp. {pengeluaran}")
+            print(f"Total Pengeluaran : Rp. {self.hitung_total_pengeluaran()}")
+        print()
+
+        print(f"Jumlah Saldo : Rp. {self.hitung_saldo()}")
+        print()
+        sleep(2)
